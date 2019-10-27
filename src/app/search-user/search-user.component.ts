@@ -4,11 +4,11 @@ import { GitSearch } from '../git-search';
 import { GitSearchUser } from '../git-search-user';
 
 @Component({
-  selector: 'app-git-search',
-  templateUrl: './git-search.component.html',
-  styleUrls: ['./git-search.component.css']
+  selector: 'app-search-user',
+  templateUrl: './search-user.component.html',
+  styleUrls: ['./search-user.component.css']
 })
-export class GitSearchComponent implements OnInit {
+export class SearchUserComponent implements OnInit {
   searchResults: GitSearch;
   searchUserResult: GitSearchUser;
   searchQuery: string;
@@ -42,7 +42,6 @@ export class GitSearchComponent implements OnInit {
     },(error) => {
       this.errorCaracter =true;
       this.displayQuery ='Error';
-      console.log(this.displayQuery);
       //alert('Error: '+ error.statusText);
     })
   }
